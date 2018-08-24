@@ -1,0 +1,13 @@
+<ul class="templates">
+  <li *ngFor="let template of templates" 
+      (click)="onSelect(template)"
+      [class.selected]="template === selectedTemplate">
+    <span class="badge">{{template.id}}</span> {{template.name}}
+  </li>
+</ul>
+
+
+<app-template [template]="selectedTemplate">
+</app-template>
+
+
